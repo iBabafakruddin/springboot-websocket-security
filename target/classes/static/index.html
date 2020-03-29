@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moove WebSocket</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/chat.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+
+<!--<div ><h2>Welcome to Moove</h2><span>Open <a href="./swagger-ui.html">Swagger</a></span></div>-->
+<!-- message form -->
+<div id="logoutDiv">
+    <span id="userNameSpan" > </span>
+    <select id="toUser">
+        <option value="All">All</option>
+        <option value="Baba">Baba</option>
+        <option value="User1">User1</option>
+        <option value="User2">User2</option>
+    </select>
+    <input type="button" value="logout" id="logout" >
+</div>
+<div id="loginDiv">
+    <!-- <input type="text" name="userName" id="userName"> -->
+    <input type="button" value="Login" id="login" >
+</div>
+
+
+
+<form name="publish">
+    <input type="text" name="message" id="chatMessage">
+    <input type="button" value="Send Chat" id="sendChatMessage" >
+</form>
+
+<!-- div with messages -->
+<div id="messages"></div>
+
+</body>
+</html>
